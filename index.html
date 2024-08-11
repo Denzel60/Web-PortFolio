@@ -8,12 +8,50 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="color-1.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/skins/color-1.css" />
+    <!-- ===== Style Switcher ===== -->
+    <link
+      rel="stylesheet"
+      href="styles/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="styles/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="styles/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="styles/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="styles/skins/color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link rel="stylesheet" href="styles/style-switcher.css" />
     <title>Web PortFolio</title>
   </head>
-  <body>
+  <body class="dark">
     <!-- <div id="app"></div> -->
+    <!--===== Main container start =====-->
     <div class="main-container">
       <div class="aside">
         <div class="logo">
@@ -24,24 +62,24 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#home"><i class="fa fa-home"></i> Home</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i> About</a>
+            <a href="#about"><i class="fa fa-user"></i> About</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-list"></i> Services</a>
+            <a href="#services"><i class="fa fa-list"></i> Services</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i> PortFolio</a>
+            <a href="#portfolio"><i class="fa fa-briefcase"></i> PortFolio</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-comment"></i> Contact</a>
+            <a href="#contact"><i class="fa fa-comment"></i> Contact</a>
           </li>
         </ul>
       </div>
       <div class="main-content">
-        <section class="home section hidden">
+        <section class="home section" id="home">
           <div class="container padd-15">
             <div class="row">
               <div class="home-info">
@@ -66,7 +104,7 @@
           </div>
         </section>
 
-        <section class="about section">
+        <section class="about section" id="about">
           <div class="container padd-15">
             <div class="row">
               <div class="section-title">
@@ -277,7 +315,7 @@
         </section>
 
         <!-- Service section start-->
-        <section class="service section">
+        <section class="service section" id="services">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -380,7 +418,7 @@
         <!-- Service section end-->
 
         <!-- PortFolio section start-->
-        <section class="portfolio section">
+        <section class="portfolio section" id="portfolio">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -454,7 +492,7 @@
         <!-- PortFolio section end-->
 
         <!-- Contact section start-->
-        <div class="contact section">
+        <div class="contact section" id="contact">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -570,6 +608,33 @@
         <!-- Contact section end-->
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
+    <!--===== Main container end =====-->
+
+    <!--===== style switcher start =====-->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!--===== style switcher end =====-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/main.js"></script>
+    <script src="js/style-switcher.js"></script>
   </body>
 </html>
